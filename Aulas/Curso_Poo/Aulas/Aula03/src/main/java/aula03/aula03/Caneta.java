@@ -1,33 +1,31 @@
+//Visibilidade público, protegido e  privado 
+package aula03.aula03;
 
-package aula02.aula02;
 public class Caneta {
-    //5 atributos e 3 métodos 
-   String modelo;
-   String cor; 
-   float ponta;
-   int carga; 
-   boolean tampada;
-   void status(){
+   public String modelo;
+   public String cor; 
+   private float ponta;
+   protected int carga; 
+   protected boolean tampada;
+   public void status(){
+       System.out.println("Modelo: " +this.modelo);
        System.out.println("Caneta : " +this.cor);
        System.out.println("Esta tampada : "+this.tampada);//Auto referencia
        System.out.println("Ponta : " +this.ponta);
        System.out.println("Carga : " +this.carga);
    }
-   void rabiscar(){
+   public void rabiscar(){
        if(this.tampada == true){
            System.out.println("[ERRO!], quando estiver tampada nao posso rabiscar...");
        }else{
            System.out.println("Rabiscando... ");
        }
    }
-   void tampar(){
+   protected void tampar(){
        this.tampada = true;
    }
-   void destampar(){
+   protected void destampar(){
        this.tampada=false;
        
    }
 }
-
-    
-
